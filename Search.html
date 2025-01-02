@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="Search.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Sevillana&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Satisfy&family=Sevillana&display=swap" rel="stylesheet">
+  
+  <style>
+   /* Basic Reset for styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Overlay styling (background dimming) */
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: 999; /* Layer above everything else */
+    transition: opacity 0.3s ease;
+}
+
+/* Popup Box styling */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    z-index: 1000; /* Above the overlay */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Popup message styling */
+.popup-message {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Close button styling */
+.close-btn {
+    background-color: #F26B0F;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+    background-color: #0056b3;
+}
+
+.close-btn:focus {
+    outline: none;
+}
+
+/* Pop-up fade-in effect */
+.popup.show, .overlay.show {
+    display: block;
+    opacity: 1;
+}
+
+/* Animating the popup for smooth transition */
+.popup.show {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.overlay.show {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+   
+  </style>
+
+</head>
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="controls.html">PlaySync</a>
+      <form class="d-flex" action="Find" method="get">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="SE" required>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="popup" id="popup">
+    <p class="popup-message" id="popupMessage"></p>
+    <button class="close-btn" onclick="closePopup()">Close</button>
+  </div>
+
+  <script>
+    // Function to show the popup with a message
+// Function to show the popup with a message
+function showPopup(message) {
+    document.getElementById('popupMessage').innerText = message;
+    document.getElementById('popup').classList.add('show');  // Show the popup with smooth fade-in
+    document.getElementById('overlay').classList.add('show');  // Show the overlay with smooth fade-in
+}
+
+// Function to close the popup
+function closePopup() {
+    document.getElementById('popup').classList.remove('show');  // Hide the popup with smooth fade-out
+    document.getElementById('overlay').classList.remove('show');  // Hide the overlay with smooth fade-out
+}
+
+
+    // Check if the message is passed via URL
+    window.onload = function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const message = urlParams.get('message');
+      if (message) {
+        showPopup(decodeURIComponent(message));
+      }
+    }
+  </script>
+
+</body>
+</html>

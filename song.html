@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="song.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="images/12472691_1920_1080_24fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+
+    <audio src="" id="audio"></audio>
+    <div class="music-player">
+        <h1 class="music-name">Urugi</h1>
+        <p class="artist-name">Music Director</p>
+        <div class="disk"></div>
+        <div class="song-slider">
+            <input type="range"  value="0" class="seek-bar">
+            <span class="current-time">00:00</span>
+            <span class="song-duration">00:00</span>
+        </div>
+        <div class="controls">
+            <button class="btn backward-btn"><ion-icon name="play-back-outline"></ion-icon></button>
+
+            <button class="play-btn pause">
+                <span></span>
+                <span></span>
+            </button>
+            
+            <button class="btn forward-btn"><ion-icon name="play-forward-outline"></ion-icon></button>
+            
+        </div>
+        <button class="styled-btn"><a href="index.html"><ion-icon name="return-down-back-outline"></ion-icon></a></button>
+    </div>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+    
+</body>
+</html>

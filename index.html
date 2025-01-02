@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Satisfy&family=Sevillana&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Satisfy&family=Sevillana&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg "> 
+        <div class="container">
+          <a class="navbar-brand" href="#">PlaySync</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About Us</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link active" href="#Trends" tabindex="-1" aria-disabled="true">Trending</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#more" tabindex="-1" aria-disabled="true">More</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#Contact" tabindex="-1" aria-disabled="true">Contact</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+            <a href="#home"> <input type="sumbit" id="login" class="btnLogin-popup" value=" Login"></a>
+
+              
+              <!-- <button  type="submit">Login</button> -->
+            </form>
+            
+            
+          </div>
+ 
+        </div>
+ <a class="admin" href="admin.html">Admin<sub><ion-icon name="person-circle-outline"></ion-icon></sub></a>       
+      </nav>
+      <!-- show -->
+       <section class="main" id="home">
+        <div class="container py-5">
+            <div class="row py-5">
+                <div class="col-lg-6 pt-5 text-center">
+                    <h1 class="pt-5">"Your favorite tracks, one click away."</h1>
+                    <button class="btn1 mt-3">Enjoy</button>
+                </div>
+
+
+
+                <div class="col-lg-6 pt-5 text-center">
+                  <div class="wrapper">
+                    <span class="icon-close">
+                      <ion-icon name="close"></ion-icon>
+                    </span>
+                    <div class="form-box login">
+                      <h2>Login</h2>
+                      <form action="Login" method="get">
+                        <div class="input-box">
+                          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                          <input type="email" required name="email">
+                          <label > EMAIL</label>
+                        </div>
+                        <div class="input-box">
+                          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                          <input type="password" required name="pwd">
+                          <label > PASSWORD</label>
+                        </div>
+                        <div class="remember-forgot">
+                          <label><input type="checkbox">Remember Me</label>
+                          <a href="#">Forgot Password</a>
+                         
+                        </div>
+                        <button type="submit" class="btn2">Login</button>
+                          <div class="login-Register">
+                            <p>Don't have an account?<a href="#" class="register-link">Register</a></p>
+                          </div>
+                  
+                      </form>
+                    </div>
+            
+                  
+                
+            <div class="form-box Register">
+                    <h2>Register</h2>
+                    <form action="Register" method="post">
+                      <div class="input-box">
+                        <span class="icon"><ion-icon name="person-add"></ion-icon></span>
+                        <input type="text" required name="UN">
+                        <label > UserName</label>
+                      </div>
+                      <div class="input-box">
+                        <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                        <input type="email" required name="EMail">
+                        <label > EMAIL</label>
+                      </div>
+                      <div class="input-box">
+                        <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                        <input type="password" required name="PWD">
+                        <label > PASSWORD</label>
+                      </div>
+                      <div class="remember-forgot">
+                        <label><input type="checkbox">I agree to the Teams &amp; Conditions</label>
+                        
+                       
+                      </div>
+                      <button type="submit" class="btn2">Register</button>
+                        <div class="login-Register">
+                          <p>Already have an account?<a href="#" class="Login-link">Login</a></p>
+                        </div>
+                  
+                    </form>
+                  </div> 
+                </div>
+            
+
+
+
+              </div>
+               </div>
+        </div>
+       </section>
+
+<!-- icon -->
+<section class="new " >
+  <div class="container py-5">
+    <div class="row pt-5">
+      <div class="col-lg-7 m-auto">
+          <div class="row text-center">
+            <div class="col-lg-4">
+              <img src="https://images.pexels.com/photos/3778702/pexels-photo-3778702.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-luid" alt="">
+              <h6 id="icon">Classic</h6>
+            </div>
+            <div class="col-lg-4">
+              <img src="https://images.pexels.com/photos/8041027/pexels-photo-8041027.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-luid" alt="">
+              <h6 id="icon">Rock</h6>
+            </div>
+            <div class="col-lg-4">
+              <img src="https://images.pexels.com/photos/1001850/pexels-photo-1001850.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-luid" alt="">
+              <h6 id="icon">Melody</h6>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+<!-- Trending -->
+<section class="Trending" id="Trends">
+  <div class="container py-5">
+    <div class="row py-5 ">
+      <div class="col-lg-5 m-auto text-center">
+        <h1>What's Trending</h1>
+        <h6 style="color: rgb(35, 8, 60);">"Without music, life would be a mistake."</h6>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 text-center">
+          <div class="card border-0 bg-light mb-2">
+            <div class="card-body">
+              <img src="https://i.pinimg.com/474x/ca/24/b2/ca24b2a166b4a30fcd968ae829e5634f.jpg" class="img-fluid" alt="">
+            </div>
+          </div>
+          <h6>Anirudh Ravichander</h6>
+          <p>ROCKSTAR</p>
+      </div>
+
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 bg-light mb-2">
+          <div class="card-body">
+            <img src="https://i.pinimg.com/736x/a1/04/7d/a1047df098d91036bfa73d75b36b32c7.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+        <h6>Shreya Ghoshal</h6>
+        <p>GUPLU</p>
+    </div>
+    <div class="col-lg-3 text-center">
+      <div class="card border-0 bg-light mb-2">
+        <div class="card-body">
+          <img src="https://i.pinimg.com/736x/1d/81/39/1d8139d0b281e32052b01e2c2fdec62e.jpg" class="img-fluid" alt="">
+        </div>
+      </div>
+      <h6>A. R. Rahman</h6>
+      <p>ISAI PUYAL</p>
+  </div>
+  <div class="col-lg-3 text-center">
+    <div class="card border-0 bg-light mb-2">
+      <div class="card-body">
+        <img src="https://i.pinimg.com/enabled_lo_mid/236x/18/4a/da/184ada79c387582c929bb63a986c6820.jpg" class="img-fluid" alt="">
+      </div>
+    </div>
+    <h6>Ariana Grande</h6>
+    <p>ARIAN-MOON</p>
+</div>
+    </div>
+     <div class="row">
+      <div class="col-lg-6 text-center m-auto">
+        <button class="btn1">Click & Enjoy</button>
+      </div>
+     </div>
+  </div>
+</section>
+<!-- About -->
+ <section class="About" id="about">
+  <div class="container">
+    <div class="row">
+       
+        <div class="col-md-6 half-side-image">
+            <img src="https://images.pexels.com/photos/3756943/pexels-photo-3756943.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Image" class="img-fluid">
+        </div>
+
+       
+        <div class="col-md-6 d-flex flex-column justify-content-center half-side-content">
+            <h2>ABOUT US</h2>
+            <p>Welcome to PlaySync, the ultimate destination for seamless music streaming. Our platform offers an intuitive and user-friendly interface that allows you to discover, enjoy, and share your favorite songs and playlists with ease. Whether you're at home, on the go, or in the office, our web player provides high-quality audio and customizable features to enhance your listening experience. With an ever-growing library of tracks, curated playlists, and personalized recommendations, PlaySyncs designed to bring the music you love right to your fingertips. Join us today and immerse yourself in the world of music like never before!.</p>
+            
+        </div>
+    </div>
+ </section>
+<!-- Slider -->
+<div class="container py-5">
+  <div class="row py-5 ">
+    <div class="col-lg-5">
+      <h1>Popular In Tamil</h1>
+      <h6 style="color: rgb(35, 8, 60);">“Where words fail, music speaks.”</h6>
+    </div>
+   
+
+  </div>
+</div>
+ <div class="container">
+<div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
+  <!-- Carousel Indicators -->
+  <div class="carousel-indicators">
+      <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#cardCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <!-- Carousel Inner (Card Items) -->
+  <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+          <div class="row g-4 justify-content-center">
+              <!-- Card 1 -->
+              <div class="col-md-4">
+                  <div class="card1 py-3">
+                      <img src="https://i.pinimg.com/236x/a2/7a/f7/a27af7446b5cba7af6f00df71ee5fa69.jpg" class="card-img-top" alt="Card 1">
+                      <div class="card-body">
+                          <h5 class="card-title">O Kadhal Kanmani</h5>
+                          <p class="card-text">A. R. Rahman</p>
+                          <button class="btn1 mt-3">Enjoy</button>
+                      </div>
+                  </div>
+              </div>
+              <!-- Card 2 -->
+              <div class="col-md-4">
+                  <div class="card1 py-3">
+                      <img src="https://i.pinimg.com/enabled_lo_mid/236x/26/14/61/261461355815a6b3c4395fe8d797ecd8.jpg" class="card-img-top" alt="Card 2">
+                      <div class="card-body">
+                          <h5 class="card-title">Vinnaithaandi Varuvaayaa
+                          </h5>
+                          <p class="card-text">A. R. Rahman</p>
+                          <button class="btn1 mt-3">Enjoy</button>
+                      </div>
+                  </div>
+              </div>
+              <!-- Card 3 -->
+              <div class="col-md-4">
+                  <div class="card1 py-3">
+                      <img src="https://i.pinimg.com/236x/b6/01/0c/b6010cd32532c4bcb5190a0552a6113c.jpg" class="card-img-top" alt="Card 3">
+                      <div class="card-body">
+                          <h5 class="card-title">Adithya Varma</h5>
+                          <p class="card-text">Radhan</p>
+                          <button class="btn1 mt-3">Enjoy</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+          <div class="row g-4 justify-content-center">
+              <!-- Card 4 -->
+              <div class="col-md-4">
+                  <div class="card1 py-3">
+                      <img src="https://i.pinimg.com/enabled_lo_mid/236x/ed/52/1c/ed521c3d3d9e750515a415739a00f539.jpg" class="card-img-top" alt="Card 4">
+                      <div class="card-body">
+                          <h5 class="card-title">Mudhal Nee Mudivum Nee</h5>
+                          <p class="card-text">Darbuka Siva</p>
+                          <button class="btn1 mt-3">Enjoy</button>
+                      </div>
+                  </div>
+              </div>
+              <!-- Card 5 -->
+              <div class="col-md-4">
+                  <div class="card1 py-3">
+                      <img src="https://i.pinimg.com/236x/04/be/e7/04bee746b2c01df58260fc22e7fa2f87.jpg" class="card-img-top" alt="Card 5">
+                      <div class="card-body">
+                          <h5 class="card-title">Thiruchitrambalam</h5>
+                          <p class="card-text">Anirudh Ravichander</p>
+                          <button class="btn1 mt-3">Enjoy</button>
+                      </div>
+                  </div>
+              </div>
+              <!-- Card 6 -->
+              <div class="col-md-4">
+                  <div class="card1 py-3">
+                      <img src="https://i.pinimg.com/236x/2d/9a/c4/2d9ac4e225a5e95c1559dc61ddc1828f.jpg" class="card-img-top" alt="Card 6">
+                      <div class="card-body">
+                          <h5 class="card-title">Remo</h5>
+                          <p class="card-text">Anirudh Ravichander</p>
+                          <button class="btn1 mt-3">Enjoy</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+          <div class="row g-4 justify-content-center">
+              <!-- Card 7 -->
+              <div class="col-md-4">
+                  <div class="card1 py-3">
+                      <img src="https://i.pinimg.com/236x/00/2e/a3/002ea3aa8acaf88e31e07d5b9ce82515.jpg" class="card-img-top" alt="Card 7">
+                      <div class="card-body">
+                          <h5 class="card-title">Thangamagan</h5>
+                          <p class="card-text">Anirudh Ravichander.</p>
+                          <button class="btn1 mt-3">Enjoy</button>
+                      </div>
+                  </div>
+              </div>
+              <!-- Card 8 -->
+              <div class="col-md-4">
+                  <div class="card1 py-3">
+                      <img src="https://i.pinimg.com/474x/a3/f0/d8/a3f0d8df3f8ec2d50735c1cf7797ecf1.jpg" class="card-img-top" alt="Card 8">
+                      <div class="card-body">
+                          <h5 class="card-title">Joe</h5>
+                          <p class="card-text">Siddhu Kumar.</p>
+                          <button class="btn1 mt-3">Enjoy</button>
+                      </div>
+                  </div>
+              </div>
+              <!-- Card 9 -->
+              <div class="col-md-4">
+                  <div class="card1 py-3">
+                      <img src="https://i.pinimg.com/enabled_lo_mid/236x/9a/b6/4a/9ab64a7c2a9705056eeabfacd99c77b5.jpg" class="card-img-top" alt="Card 9">
+                      <div class="card-body">
+                          <h5 class="card-title">Naanum Rowdy Dhaan</h5>
+                          <p class="card-text">Anirudh Ravichander</p>
+                          <button class="btn1 mt-3">Enjoy</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Carousel Controls (Previous and Next) -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+<!-- just -->
+
+<section class="show" id="more">
+<div class="container">
+  <div class="row py-5 ">
+    <div class="col-lg-5  ">
+      <h1>Just Arrived</h1>
+      <h6 style="color: rgb(35, 8, 60);">“Music is the soundtrack of your life.”</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3 text-center">
+        <div class="card2 border-0 bg-light mb-2">
+          <div class="card-body">
+            <img src="https://i.pinimg.com/enabled_lo_mid/736x/62/85/00/6285005431c3bb902a099de5538f9abe.jpg" class="img-fluid" alt="">
+          </div>
+        </div>
+        <h6>Raataan Lambiyan</h6>
+        <p>Asees Kaur</p>
+    </div>
+
+    <div class="col-lg-3 text-center">
+      <div class="card2 border-0 bg-light mb-2">
+        <div class="card-body">
+          <img src="https://i.pinimg.com/236x/d0/32/4b/d0324b2bc3f407ce725a606016b910f6.jpg" class="img-fluid" alt="">
+        </div>
+      </div>
+      <h6>Channa Mereya
+</h6>
+      <p>Arijit Singh
+</p>
+  </div>
+  <div class="col-lg-3 text-center">
+    <div class="card2 border-0 bg-light mb-2">
+      <div class="card-body">
+        <img src="https://i.pinimg.com/236x/81/55/cc/8155cce38d68a4989481390032ec6845.jpg" class="img-fluid" alt="">
+      </div>
+    </div>
+    <h6>
+Hayyoda</h6>
+    <p>Anirudh Ravichander</p>
+</div>
+<div class="col-lg-3 text-center">
+  <div class="card2 border-0 bg-light mb-2">
+    <div class="card-body">
+      <img src="https://i.pinimg.com/236x/df/a8/43/dfa84388a44dd87bb5639640317f805e.jpg" class="img-fluid" alt="">
+    </div>
+  </div>
+  <h6>Mehabooba</h6>
+  <p>Ananya Bhat</p>
+</div>
+<div class="col-lg-3 text-center">
+  <div class="card2 border-0 bg-light mb-2">
+    <div class="card-body">
+      <img src="https://i.pinimg.com/enabled_lo_mid/236x/bb/be/63/bbbe63eccf7c6734cc0a1cd30093152d.jpg" class="img-fluid" alt="">
+    </div>
+  </div>
+  <h6>Raataan Lambiyan</h6>
+  <p>Asees Kaur</p>
+</div>
+
+<div class="col-lg-3 text-center">
+  <div class="card2 border-0 bg-light mb-2">
+    <div class="card-body">
+      <img src="https://i.pinimg.com/236x/36/14/e9/3614e9e63f864fac7a1f72c2df533985.jpg" class="img-fluid" alt="">
+    </div>
+  </div>
+  <h6>Ariana Grande</h6>
+  <p>ARIAN-MOON</p>
+</div>
+
+<div class="col-lg-3 text-center">
+  <div class="card2 border-0 bg-light mb-2">
+    <div class="card-body">
+      <img src="https://i.pinimg.com/236x/0c/d6/a1/0cd6a1e4b0c39eec51a0df7dde29a07e.jpg" class="img-fluid" alt="">
+    </div>
+  </div>
+  <h6>Agar Tum Saath Ho</h6>
+  <p>Alka Yagnik</p>
+</div>
+<div class="col-lg-3 text-center">
+  <div class="card2 border-0 bg-light mb-2">
+    <div class="card-body">
+      <img src="https://i.pinimg.com/474x/41/88/e7/4188e7b9b35dbe921c6854b281c72800.jpg" class="img-fluid" alt="">
+    </div>
+  </div>
+  <h6>Jamal Kudu</h6>
+  <p>Sounik</p>
+</div>
+  </div>
+   
+</div>
+
+
+</section>
+
+<section class="girl py-5">
+  <div class="container py-3 ">
+    <div class="row py-5">
+      <div class="col-lg-6">
+        <h1 class="font-weight-bold py-3">AD free Music</h1>
+        <h1>HD Quantity Bgm & Song</h1>
+        <button class="btn1 mt-3">Start</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- <footer>
+  <div class="container">
+    <div class="wrapper">
+      <div class="footer-widget">
+        <a href="#">
+          <img src="logo.jpg"  class="logo">
+        </a>
+        <p class="Desc">
+          As a web developer, I offer comprehensive services to help bring your online vision to life. Whether you're looking for a responsive website, custom web applications, or an intuitive user experience, I specialize in creating solutions that are both functional and visually appealing. From front-end design to back-end development, I ensure seamless integration, fast performance, and a smooth user interface. Let me help you build a strong online presence that meets your business goals and provides a great experience for your users.
+        </p>
+        <ul class="social">
+          <li>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-widget">
+        <h6>Services</h6>
+        <ul class="link">
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Web Development</a></li>
+          <li><a href="#">Logo Create</a></li>
+          <li><a href="#">Poster Design</a></li>
+          <li><a href="#">Connect</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-widget">
+        <h6>Help &amp; Support</h6>
+        <ul class="link">
+          <li><a href="#">Support Center</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Teams &amp; Conditions</a></li>
+
+        </ul>
+      </div>
+
+    </div>
+<div class="copyrights-wrapper">
+  <p>Design and Development By 
+    <a href="#" target="blank">FRANCIS </a>
+  </p>
+
+</div>
+
+
+
+  </div>
+</footer> -->
+<section class="last py-5" id="Contact">
+<footer class="bg-light text-black py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="logo1.jpg" class="logo"  alt="">
+        <p>"Building websites that work for you, not the other way around."</p>
+      </div>
+      <div class="col-md-4">
+        <h5>Services</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-black">Web Design</a></li>
+          <li><a href="#" class="text-black">Web Development</a></li>
+          <li><a href="#" class="text-black">Logo Create</a></li>
+          <li><a href="#" class="text-black">Video Editing</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5>Contact</h5>
+        <p>Email: francis2k02@gamil.com</p>
+        <p>Phone:(+91) 9080799643</p>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col text-center">
+        <p>&copy; Desgin and Development By 
+          <a href="portflio.html" id="Francis" target="blank">FRANCIS </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+</section>
+
+
+
+
+
+
+
+ 
+<script src="index.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
